@@ -47,8 +47,7 @@ fn main() -> amethyst::Result<()> {
     let game_data = GameDataBuilder::default()
         .with_bundle(TransformBundle::new())?
         .with_bundle(
-            InputBundle::<String, String>::new()
-                .with_bindings_from_file(input_config_path)?,
+            InputBundle::<String, String>::new().with_bindings_from_file(input_config_path)?,
         )?
         .with_bundle(
             RenderBundle::new(pipe, Some(config))
